@@ -1,1 +1,0 @@
-Esta rama contendrá todo el código correspondiente a la programación de los dispositivos.
