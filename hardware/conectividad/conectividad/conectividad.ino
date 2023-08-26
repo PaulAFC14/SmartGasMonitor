@@ -5,7 +5,7 @@
 
 const char* ssid = "SGMSensor";
 const char* password = "password";
-IPAddress local_IP(192, 168, 4, 1); // Dirección IP estática para el ESP32 AP
+IPAddress local_IP(192, 168, 4, 1);
 IPAddress gateway(192, 168, 4, 1);
 IPAddress subnet(255, 255, 255, 0);
 
@@ -32,18 +32,6 @@ void setup() {
   if (!MDNS.begin("esp32")) {
     Serial.println("Error setting up MDNS responder!");
   }
-
-  server.on("/", HTTP_GET, [] (AsyncWebServerRequest *request){
-
-
-    
-    // Prepara la respuesta JSON
-    String jsonResponse = "{\"message\":\"Hola\",\"status\":200}";
-
-    // Envía la respuesta JSON
-    request->send(200, "text/plain", "OK");
-  });
-
 
   // Configura el servidor HTTP
   server.on("/connect", HTTP_POST, [](AsyncWebServerRequest *request){
