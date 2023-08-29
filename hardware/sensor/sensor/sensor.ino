@@ -51,7 +51,7 @@ void setupAccesspoint() {
   }
 
   // Init mDNS with name "esp32"
-  if (!MDNS.begin("esp32")) {
+  if (!MDNS.begin("sgm")) {
     Serial.println("Error setting up MDNS.");
   }else{
     Serial.println("MDNS done.");
@@ -74,7 +74,6 @@ void myHttpServer() {
   server.on("/credentials", HTTP_POST, [](AsyncWebServerRequest *request){
     network = request->arg("ssid");
     pass = request->arg("password");
-    userId = request->arg("userId");
 
     Serial.println("(/credentials): Request received.");
     Serial.print("Network: ");
