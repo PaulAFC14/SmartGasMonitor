@@ -12,7 +12,7 @@ late double vr;
 
 class LoginView extends StatefulWidget {
   late BuildContext context;
-  LoginView(this.context, {super.key}){
+  LoginView(this.context, {super.key}) {
     //Responsive method
     Map<String, dynamic> responsive =
         ResponsiveData(context: context).getAspectRatio();
@@ -33,24 +33,23 @@ class _LoginViewState extends State<LoginView> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    invisible = true; 
+    invisible = true;
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).canvasColor,
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 5*vw),
+        padding: EdgeInsets.symmetric(horizontal: 5 * vw),
         child: ListView(
           children: [
-            SizedBox(height: 15*vr),
+            SizedBox(height: 15 * vr),
             Column(
               children: [
                 Container(
-                  width: 33*vw,
-                  height: 33*vw,
+                  width: 33 * vw,
+                  height: 33 * vw,
                   child: Image.asset(
                     'assets/img/logo-sgm.png',
                     fit: BoxFit.fill,
@@ -58,66 +57,68 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ],
             ),
-            SizedBox(height: 10*vr),
+            SizedBox(height: 10 * vr),
             Text(
               'Inicio de sesión',
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontSize: 4.5*vw,
+                fontSize: 4.5 * vw,
                 fontWeight: FontWeight.w500,
                 color: Theme.of(context).hintColor,
               ),
             ),
-            SizedBox(height: 10*vr),    
+            SizedBox(height: 10 * vr),
             Text(
               'Correo electrónico',
               textAlign: TextAlign.left,
               style: TextStyle(
-                fontSize: 4*vw,
+                fontSize: 4 * vw,
                 fontWeight: FontWeight.w400,
                 color: Theme.of(context).hintColor,
               ),
             ),
-            SizedBox(height: 2.5*vr),
+            SizedBox(height: 2.5 * vr),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
               //Inicio decoración
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Theme.of(context).dividerColor, width: 0.75*vw) 
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                        color: Theme.of(context).dividerColor,
+                        width: 0.75 * vw)),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 0.75*vw) 
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                        color: Theme.of(context).primaryColor,
+                        width: 0.75 * vw)),
                 hintText: 'correo@example.com', //Texto predefinido
                 hintStyle: TextStyle(
-                  fontSize: 4*vw,
+                  fontSize: 4 * vw,
                   fontWeight: FontWeight.w400,
                   color: Theme.of(context).indicatorColor,
                 ),
               ),
               cursorColor: Theme.of(context).hintColor,
               style: TextStyle(
-                fontSize: 4*vw,
+                fontSize: 4 * vw,
                 fontWeight: FontWeight.w400,
                 color: Theme.of(context).hintColor,
               ),
               //Fin decoración
             ),
-            SizedBox(height: 5*vr),    
+            SizedBox(height: 5 * vr),
             Text(
               'Contraseña',
               textAlign: TextAlign.left,
               style: TextStyle(
-                fontSize: 4*vw,
+                fontSize: 4 * vw,
                 fontWeight: FontWeight.w400,
                 color: Theme.of(context).hintColor,
               ),
             ),
-            SizedBox(height: 2.5*vr),
+            SizedBox(height: 2.5 * vr),
             TextFormField(
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.done,
@@ -130,69 +131,67 @@ class _LoginViewState extends State<LoginView> {
                     setState(() {
                       invisible = !invisible;
                     });
-                  }, 
-                  icon: Icon(
-                    (invisible) ? Iconsax.eye : Iconsax.eye_slash,
-                    color: Theme.of(context).indicatorColor
-                  ),
-
+                  },
+                  icon: Icon((invisible) ? Iconsax.eye : Iconsax.eye_slash,
+                      color: Theme.of(context).indicatorColor),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Theme.of(context).dividerColor, width: 0.75*vw) 
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                        color: Theme.of(context).dividerColor,
+                        width: 0.75 * vw)),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(20),
-                  borderSide: BorderSide(color: Theme.of(context).primaryColor, width: 0.75*vw) 
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    borderSide: BorderSide(
+                        color: Theme.of(context).primaryColor,
+                        width: 0.75 * vw)),
                 hintText: '12345678', //Texto predefinido
                 hintStyle: TextStyle(
-                  fontSize: 4*vw,
+                  fontSize: 4 * vw,
                   fontWeight: FontWeight.w400,
                   color: Theme.of(context).indicatorColor,
                 ),
               ),
               cursorColor: Theme.of(context).hintColor,
               style: TextStyle(
-                fontSize: 4*vw,
+                fontSize: 4 * vw,
                 fontWeight: FontWeight.w400,
                 color: Theme.of(context).hintColor,
               ),
               //Fin decoración
-            ), 
-            SizedBox(height: 4*vr),
+            ),
+            SizedBox(height: 4 * vr),
             GestureDetector(
               onTap: () => Routes(context), //Enviar a vista de contraseña
               child: Container(
                 color: Colors.transparent,
-                margin: EdgeInsets.only(left: 50*vw),
+                margin: EdgeInsets.only(left: 50 * vw),
                 child: Text(
                   'Olvidé mi contraseña',
                   textAlign: TextAlign.right,
                   style: TextStyle(
-                    fontSize: 4*vw,
-                    fontWeight: FontWeight.w400,
-                    color: Theme.of(context).indicatorColor,
-                    decoration: TextDecoration.underline
-                  ),
+                      fontSize: 4 * vw,
+                      fontWeight: FontWeight.w400,
+                      color: Theme.of(context).indicatorColor,
+                      decoration: TextDecoration.underline),
                 ),
               ),
             ),
-            SizedBox(height: 15*vr),  
+            SizedBox(height: 15 * vr),
             GestureDetector(
               onTap: () {},
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 5*vw),
-                height: 15*vr,
+                margin: EdgeInsets.symmetric(horizontal: 5 * vw),
+                height: 15 * vr,
                 decoration: BoxDecoration(
                   color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.circular(15*vr),
+                  borderRadius: BorderRadius.circular(15 * vr),
                 ),
                 child: Center(
                   child: Text(
                     'Ingresar',
                     style: TextStyle(
-                      fontSize: 4*vw,
+                      fontSize: 4 * vw,
                       fontWeight: FontWeight.w700,
                       color: Theme.of(context).canvasColor,
                     ),
@@ -200,22 +199,22 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ),
             ),
-            SizedBox(height: 5*vr),  
+            SizedBox(height: 5 * vr),
             GestureDetector(
               onTap: () {},
               child: Container(
-                margin: EdgeInsets.symmetric(horizontal: 5*vw),
-                height: 15*vr,
+                margin: EdgeInsets.symmetric(horizontal: 5 * vw),
+                height: 15 * vr,
                 decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.circular(15*vr),
-                  border: Border.all(color: Theme.of(context).primaryColor, width: 1*vw)
-                ),
+                    color: Colors.transparent,
+                    borderRadius: BorderRadius.circular(15 * vr),
+                    border: Border.all(
+                        color: Theme.of(context).primaryColor, width: 1 * vw)),
                 child: Center(
                   child: Text(
                     'Registrarse',
                     style: TextStyle(
-                      fontSize: 4*vw,
+                      fontSize: 4 * vw,
                       fontWeight: FontWeight.w700,
                       color: Theme.of(context).primaryColor,
                     ),
