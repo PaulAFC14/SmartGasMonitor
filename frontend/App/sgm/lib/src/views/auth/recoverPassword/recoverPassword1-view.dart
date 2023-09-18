@@ -100,7 +100,7 @@ class _RecoverPasswordView1 extends State<RecoverPasswordView1> {
             SizedBox(height: 2.5 * vr),
             TextFormField(
               keyboardType: TextInputType.emailAddress,
-              textInputAction: TextInputAction.next,
+              textInputAction: TextInputAction.send,
               //Inicio decoración
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(

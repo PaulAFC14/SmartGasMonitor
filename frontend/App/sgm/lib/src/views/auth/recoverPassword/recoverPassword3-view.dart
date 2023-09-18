@@ -50,7 +50,8 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () => Routes(context).goTo(RecoverPasswordView2(context)),
+                  onTap: () =>
+                      Routes(context).goTo(RecoverPasswordView2(context)),
                   child: Container(
                     width: 8 * vw,
                     height: 8 * vr,
@@ -77,7 +78,6 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
                 ),
               ],
             ),
-            
             SizedBox(height: 5 * vr),
             Text(
               'Contraseña',
@@ -91,12 +91,12 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
             SizedBox(height: 2.5 * vr),
             TextFormField(
               keyboardType: TextInputType.visiblePassword,
-              textInputAction: TextInputAction.done,
-              obscureText: invisible,
+              textInputAction: TextInputAction.next,
+              obscureText: true,
 
               //Inicio decoración
               decoration: InputDecoration(
-                suffixIcon: IconButton(
+                /*suffixIcon: IconButton(
                   onPressed: () {
                     setState(() {
                       invisible = !invisible;
@@ -104,7 +104,7 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
                   },
                   icon: Icon((invisible) ? Iconsax.eye : Iconsax.eye_slash,
                       color: Theme.of(context).indicatorColor),
-                ),
+                ),*/
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                     borderSide: BorderSide(
@@ -182,7 +182,6 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
               ),
               //Fin decoración
             ),
-
             SizedBox(height: 10 * vr),
             GestureDetector(
               onTap: () => Routes(context).goTo(RecoverPasswordView2(context)),
@@ -205,7 +204,6 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
                 ),
               ),
             ),
-
           ],
         ),
       ),

@@ -50,7 +50,8 @@ class _RecoverPasswordView2 extends State<RecoverPasswordView2> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () => Routes(context).goTo(RecoverPasswordView1(context)),
+                  onTap: () =>
+                      Routes(context).goTo(RecoverPasswordView1(context)),
                   child: Container(
                     width: 8 * vw,
                     height: 8 * vr,
@@ -77,7 +78,6 @@ class _RecoverPasswordView2 extends State<RecoverPasswordView2> {
                 ),
               ],
             ),
-            
             SizedBox(height: 10 * vr),
             Text(
               'Código de verificación',
@@ -91,7 +91,7 @@ class _RecoverPasswordView2 extends State<RecoverPasswordView2> {
             SizedBox(height: 2.5 * vr),
             TextFormField(
               keyboardType: TextInputType.number,
-              textInputAction: TextInputAction.next,
+              textInputAction: TextInputAction.done,
               //Inicio decoración
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(

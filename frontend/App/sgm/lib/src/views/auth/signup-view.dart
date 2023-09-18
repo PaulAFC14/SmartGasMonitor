@@ -255,12 +255,12 @@ class _SignupViewState extends State<SignupView> {
             SizedBox(height: 2.5 * vr),
             TextFormField(
               keyboardType: TextInputType.visiblePassword,
-              textInputAction: TextInputAction.done,
-              obscureText: invisible,
+              textInputAction: TextInputAction.next,
+              obscureText: true,
 
               //Inicio decoración
               decoration: InputDecoration(
-                suffixIcon: IconButton(
+                /*suffixIcon: IconButton(
                   onPressed: () {
                     setState(() {
                       invisible = !invisible;
@@ -268,7 +268,7 @@ class _SignupViewState extends State<SignupView> {
                   },
                   icon: Icon((invisible) ? Iconsax.eye : Iconsax.eye_slash,
                       color: Theme.of(context).indicatorColor),
-                ),
+                ),*/
                 enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(20),
                     borderSide: BorderSide(
