@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
-import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 import 'package:sgm/src/widgets/menu.dart';
 
 late double vw;
@@ -50,18 +49,10 @@ class _ActuatorDetailViewState extends State<ActuatorDetailView> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(
-                  onTap: () => Routes(context).goTo(SensorsListView(context)),
-                  child: Container(
-                    width: 8 * vw,
-                    height: 8 * vr,
-                    color: Colors.transparent,
-                    child: Icon(
-                      Icons.arrow_back_ios_new_rounded,
-                      size: 8 * vw,
-                      color: Theme.of(context).hintColor,
-                    ),
-                  ),
+                Container(
+                  width: 8 * vw,
+                  height: 8 * vr,
+                  color: Colors.transparent,
                 ),
                 Container(
                   width: 10 * vw,

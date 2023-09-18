@@ -92,7 +92,7 @@ class _SensorDetailViewState extends State<SensorDetailView> {
                 ),
                 SizedBox(width: 1 * vw),
                 GestureDetector(
-                  onTap: () => Routes(context).goTo(SensorsListView(context)),
+                  onTap: () => Routes(context),
                   child: Container(
                     width: 6 * vw,
                     height: 6 * vr,

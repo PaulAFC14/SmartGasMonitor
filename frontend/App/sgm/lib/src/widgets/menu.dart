@@ -5,6 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
 import 'package:sgm/src/views/actuator/actuator-detail-view.dart';
+import 'package:sgm/src/views/info/info-view.dart';
 import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
@@ -122,7 +123,7 @@ class _MenuState extends State<Menu> {
             ),
           ),
           GestureDetector(
-            onTap: () => Routes(context),
+            onTap: () => Routes(context).goTo(InfoView(context)),
             child: Container(
               width: 20 * vw,
               height: 20 * vr,
