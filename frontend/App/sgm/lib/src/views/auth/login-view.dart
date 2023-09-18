@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
+import 'package:sgm/src/views/auth/recoverPassword/recoverPassword1-view.dart';
 import 'package:sgm/src/views/auth/signup-view.dart';
 import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
@@ -164,7 +165,7 @@ class _LoginViewState extends State<LoginView> {
             ),
             SizedBox(height: 4 * vr),
             GestureDetector(
-              onTap: () => Routes(context), //Enviar a vista de contraseña
+              onTap: () => Routes(context).goTo(RecoverPasswordView1(context)), //Enviar a vista de contraseña
               child: Container(
                 color: Colors.transparent,
                 margin: EdgeInsets.only(left: 50 * vw),
