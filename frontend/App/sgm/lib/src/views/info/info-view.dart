@@ -133,7 +133,7 @@ class _InfoViewState extends State<InfoView> {
                     height: 8 * vw,
                     color: Colors.transparent,
                     child: Icon(
-                      Icons.keyboard_arrow_down_rounded,
+                      Icons.keyboard_arrow_up_rounded,
                       size: 8 * vw,
                       color: Theme.of(context).hintColor,
                     ),
