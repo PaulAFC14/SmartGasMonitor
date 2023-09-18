@@ -195,7 +195,7 @@ class _RecoverPasswordView3 extends State<RecoverPasswordView3> {
                 ),
                 child: Center(
                   child: Text(
-                    'Enviar',
+                    'Confirmar',
                     style: TextStyle(
                       fontSize: 4 * vw,
                       fontWeight: FontWeight.w700,
