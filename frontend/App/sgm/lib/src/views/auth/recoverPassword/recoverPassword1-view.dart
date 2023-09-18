@@ -1,10 +1,10 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
 import 'package:sgm/src/views/auth/login-view.dart';
+import 'package:sgm/src/views/auth/recoverPassword/recoverPassword2-view.dart';
 import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
@@ -131,7 +131,7 @@ class _RecoverPasswordView1 extends State<RecoverPasswordView1> {
             ),
             SizedBox(height: 10 * vr),
             GestureDetector(
-              onTap: () => Routes(context).goTo(SensorsListView(context)),
+              onTap: () => Routes(context).goTo(RecoverPasswordView2(context)),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 5 * vw),
                 height: 15 * vr,
