@@ -26,10 +26,13 @@ class InfoView extends StatefulWidget {
 }
 
 class _InfoViewState extends State<InfoView> {
+  late bool toogle;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    toogle = false;
   }
 
   @override
@@ -78,68 +81,133 @@ class _InfoViewState extends State<InfoView> {
               ),
             ),
             SizedBox(height: 5 * vw),
-            Container(
-              width: 90 * vw,
-              padding:
-                  EdgeInsets.symmetric(horizontal: 5 * vw, vertical: 8.5 * vw),
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Theme.of(context).dividerColor,
-                  width: 0.5 * vw,
-                ),
-              ),
-              child: Row(
+            card(toogle),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget card(bool show) {
+    if (show) {
+      return GestureDetector(
+        onTap: () {
+          setState(() {
+            toogle = !toogle;
+          });
+        },
+        child: Container(
+          width: 90 * vw,
+          padding: EdgeInsets.symmetric(horizontal: 5 * vw, vertical: 5 * vw),
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: Theme.of(context).dividerColor,
+              width: 0.5 * vw,
+            ),
+          ),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    width: 8 * vw,
-                    height: 8 * vr,
-                    child: Image.asset('assets/img/actuador-verde.png'),
-                  ),
-                  SizedBox(width: 5 * vw),
-                  Container(
-                    width: 31 * vw,
                     height: 8 * vw,
                     child: Row(
                       children: [
                         Text(
-                          'Estado',
+                          '¿Cómo actuar en caso de fuga?',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontSize: 4 * vw,
-                            fontWeight: FontWeight.w400,
+                            fontWeight: FontWeight.w500,
                             color: Theme.of(context).hintColor,
                           ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(width: 5 * vw),
                   Container(
-                    width: 30 * vw,
+                    width: 8 * vw,
                     height: 8 * vw,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8 * vw),
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    child: Center(
-                      child: Text(
-                        'ABIERTO',
-                        style: TextStyle(
-                          fontSize: 4 * vw,
-                          fontWeight: FontWeight.w700,
-                          color: Theme.of(context).canvasColor,
-                        ),
-                      ),
+                    color: Colors.transparent,
+                    child: Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      size: 8 * vw,
+                      color: Theme.of(context).hintColor,
                     ),
                   ),
                 ],
               ),
-            ),
-          ],
+              SizedBox(height: 2.5 * vr),
+              Container(
+                width: 80 * vw,
+                child: Text(
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontSize: 3.5 * vw,
+                    fontWeight: FontWeight.w400,
+                    color: Theme.of(context).indicatorColor,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      return GestureDetector(
+        onTap: () {
+          setState(() {
+            toogle = !toogle;
+          });
+        },
+        child: Container(
+          width: 90 * vw,
+          padding: EdgeInsets.symmetric(horizontal: 5 * vw, vertical: 8.5 * vw),
+          decoration: BoxDecoration(
+            color: Colors.transparent,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: Theme.of(context).dividerColor,
+              width: 0.5 * vw,
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Container(
+                height: 8 * vw,
+                child: Row(
+                  children: [
+                    Text(
+                      '¿Cómo actuar en caso de fuga?',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 4 * vw,
+                        fontWeight: FontWeight.w500,
+                        color: Theme.of(context).hintColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                width: 8 * vw,
+                height: 8 * vw,
+                color: Colors.transparent,
+                child: Icon(
+                  Icons.keyboard_arrow_down_rounded,
+                  size: 8 * vw,
+                  color: Theme.of(context).hintColor,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
   }
 }
