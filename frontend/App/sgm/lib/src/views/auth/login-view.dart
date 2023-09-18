@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
+import 'package:sgm/src/views/auth/signup-view.dart';
 import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
@@ -202,7 +203,7 @@ class _LoginViewState extends State<LoginView> {
             ),
             SizedBox(height: 5 * vr),
             GestureDetector(
-              onTap: () {},
+              onTap: () => Routes(context).goTo(SignupView(context)),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 5 * vw),
                 height: 15 * vr,

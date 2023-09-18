@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
+import 'package:sgm/src/views/auth/login-view.dart';
 import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
@@ -46,16 +47,37 @@ class _SignupViewState extends State<SignupView> {
         child: ListView(
           children: [
             SizedBox(height: 2.5 * vr),
-            Text(
-              'Registro',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 4.5 * vw,
-                fontWeight: FontWeight.w500,
-                color: Theme.of(context).hintColor,
-              ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                GestureDetector(
+                  onTap: () => Routes(context).goTo(LoginView(context)),
+                  child: Container(
+                    width: 8 * vw,
+                    height: 8 * vr,
+                    color: Colors.transparent,
+                    child: Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      size: 8 * vw,
+                      color: Theme.of(context).hintColor,
+                    ),
+                  ),
+                ),
+                Text(
+                  'Registro',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 4.5 * vw,
+                    fontWeight: FontWeight.w500,
+                    color: Theme.of(context).hintColor,
+                  ),
+                ),
+                Container(
+                  width: 8 * vw,
+                  height: 8 * vr,
+                ),
+              ],
             ),
-
             SizedBox(height: 5 * vr),
             Text(
               'Nombre(s)',
@@ -97,7 +119,6 @@ class _SignupViewState extends State<SignupView> {
               ),
               //Fin decoración
             ),
-            
             SizedBox(height: 5 * vr),
             Text(
               'Apellidos',
@@ -139,7 +160,6 @@ class _SignupViewState extends State<SignupView> {
               ),
               //Fin decoración
             ),
-            
             SizedBox(height: 5 * vr),
             Text(
               'Correo electrónico',
@@ -181,7 +201,6 @@ class _SignupViewState extends State<SignupView> {
               ),
               //Fin decoración
             ),
-
             SizedBox(height: 5 * vr),
             Text(
               'Teléfono',
@@ -223,7 +242,6 @@ class _SignupViewState extends State<SignupView> {
               ),
               //Fin decoración
             ),
-
             SizedBox(height: 5 * vr),
             Text(
               'Contraseña',
@@ -276,7 +294,6 @@ class _SignupViewState extends State<SignupView> {
               ),
               //Fin decoración
             ),
-
             SizedBox(height: 5 * vr),
             Text(
               'Confirmar contraseña',
@@ -329,7 +346,6 @@ class _SignupViewState extends State<SignupView> {
               ),
               //Fin decoración
             ),
-            
             SizedBox(height: 7.5 * vr),
             GestureDetector(
               onTap: () => Routes(context).goTo(SensorsListView(context)),
