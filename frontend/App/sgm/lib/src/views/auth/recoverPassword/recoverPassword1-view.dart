@@ -5,7 +5,6 @@ import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
 import 'package:sgm/src/views/auth/login-view.dart';
 import 'package:sgm/src/views/auth/recoverPassword/recoverPassword2-view.dart';
-import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
 late double vh;

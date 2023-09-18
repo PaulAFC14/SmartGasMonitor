@@ -3,7 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
-import 'package:sgm/src/views/auth/login-view.dart';
+import 'package:sgm/src/views/auth/recoverPassword/recoverPassword1-view.dart';
+import 'package:sgm/src/views/auth/recoverPassword/recoverPassword3-view.dart';
 import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
@@ -50,7 +51,7 @@ class _RecoverPasswordView2 extends State<RecoverPasswordView2> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 GestureDetector(
-                  onTap: () => Routes(context).goTo(LoginView(context)),
+                  onTap: () => Routes(context).goTo(RecoverPasswordView1(context)),
                   child: Container(
                     width: 8 * vw,
                     height: 8 * vr,
@@ -121,7 +122,7 @@ class _RecoverPasswordView2 extends State<RecoverPasswordView2> {
             ),
             SizedBox(height: 10 * vr),
             GestureDetector(
-              onTap: () => Routes(context).goTo(SensorsListView(context)),
+              onTap: () => Routes(context).goTo(RecoverPasswordView3(context)),
               child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 5 * vw),
                 height: 15 * vr,
