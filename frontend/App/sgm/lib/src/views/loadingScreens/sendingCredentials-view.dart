@@ -53,7 +53,7 @@ class _SendingCredentials extends State<SendingCredentials> {
             ),
             SizedBox(height: 5 * vw),
             Text(
-              'Dispositivo vinculado correctamente',
+              'Enviando credenciales...',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 4.5 * vw,
