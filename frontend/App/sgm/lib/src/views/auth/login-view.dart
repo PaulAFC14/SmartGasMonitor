@@ -146,7 +146,7 @@ class _LoginViewState extends State<LoginView> {
                     borderSide: BorderSide(
                         color: Theme.of(context).primaryColor,
                         width: 0.75 * vw)),
-                hintText: '12345678', //Texto predefinido
+                hintText: '********', //Texto predefinido
                 hintStyle: TextStyle(
                   fontSize: 4 * vw,
                   fontWeight: FontWeight.w400,
