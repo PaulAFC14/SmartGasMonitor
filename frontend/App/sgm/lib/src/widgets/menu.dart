@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
+import 'package:sgm/src/views/sensors/sensors-list-view.dart';
 
 late double vw;
 late double vh;
@@ -56,7 +57,7 @@ class _MenuState extends State<Menu> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
-            onTap: () => Routes(context),
+            onTap: () => Routes(context).goTo(SensorsListView(context)),
             child: Container(
               width: 20 * vw,
               height: 20 * vr,

@@ -68,6 +68,7 @@ flutter:
     - assets/img/sensor-verde.png
     - assets/img/actuador-gris.png
     - assets/img/actuador-verde.png
+    - assets/img/temp.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
+import 'package:sgm/src/views/sensors/sensor-detail-view.dart';
 import 'package:sgm/src/widgets/menu.dart';
 
 late double vw;
@@ -92,63 +93,66 @@ class _SensorsListViewState extends State<SensorsListView> {
               ),
             ),
             SizedBox(height: 2.5 * vw),
-            Container(
-              width: 90 * vw,
-              padding:
-                  EdgeInsets.symmetric(horizontal: 5 * vw, vertical: 8.5 * vw),
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                borderRadius: BorderRadius.circular(20),
-                border: Border.all(
-                  color: Theme.of(context).dividerColor,
-                  width: 0.5 * vw,
-                ),
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    width: 8 * vw,
-                    height: 8 * vr,
-                    child: Image.asset('assets/img/sensor-verde.png'),
+            GestureDetector(
+              onTap: () => Routes(context).goTo(SensorDetailView(context)),
+              child: Container(
+                width: 90 * vw,
+                padding: EdgeInsets.symmetric(
+                    horizontal: 5 * vw, vertical: 8.5 * vw),
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(
+                    color: Theme.of(context).dividerColor,
+                    width: 0.5 * vw,
                   ),
-                  SizedBox(width: 5 * vw),
-                  Container(
-                    width: 41 * vw,
-                    height: 8 * vw,
-                    child: Row(
-                      children: [
-                        Text(
-                          'Cocina',
-                          textAlign: TextAlign.left,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 8 * vw,
+                      height: 8 * vr,
+                      child: Image.asset('assets/img/sensor-verde.png'),
+                    ),
+                    SizedBox(width: 5 * vw),
+                    Container(
+                      width: 41 * vw,
+                      height: 8 * vw,
+                      child: Row(
+                        children: [
+                          Text(
+                            'Cocina',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              fontSize: 4 * vw,
+                              fontWeight: FontWeight.w400,
+                              color: Theme.of(context).hintColor,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(width: 5 * vw),
+                    Container(
+                      width: 20 * vw,
+                      height: 8 * vw,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8 * vw),
+                        color: Theme.of(context).primaryColor,
+                      ),
+                      child: Center(
+                        child: Text(
+                          '10',
                           style: TextStyle(
                             fontSize: 4 * vw,
-                            fontWeight: FontWeight.w400,
-                            color: Theme.of(context).hintColor,
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context).canvasColor,
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  SizedBox(width: 5 * vw),
-                  Container(
-                    width: 20 * vw,
-                    height: 8 * vw,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8 * vw),
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    child: Center(
-                      child: Text(
-                        '10',
-                        style: TextStyle(
-                          fontSize: 4 * vw,
-                          fontWeight: FontWeight.w700,
-                          color: Theme.of(context).canvasColor,
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],
