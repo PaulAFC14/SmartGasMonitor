@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
         canvasColor: Color.fromARGB(255, 255, 255, 255),
         dividerColor: Color.fromARGB(255, 225, 225, 225),
         shadowColor: Color.fromARGB(51, 155, 155, 155),
+        unselectedWidgetColor: Color.fromARGB(255, 127, 127, 127),
         indicatorColor: Color.fromARGB(255, 110, 110, 110),
         hintColor: Color.fromARGB(255, 60, 60, 60),
         primaryColor: Color.fromARGB(255, 18, 167, 95),
