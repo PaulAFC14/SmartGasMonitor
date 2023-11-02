@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         hintColor: Color.fromARGB(255, 60, 60, 60),
         primaryColor: Color.fromARGB(255, 18, 167, 95),
         secondaryHeaderColor: Color.fromARGB(255, 234, 31, 56),
+        primaryColorLight: Color.fromARGB(255, 244, 208, 63),
       ),
       initialRoute: '/',
       routes: {'/': (context) => SplashView(context)},
