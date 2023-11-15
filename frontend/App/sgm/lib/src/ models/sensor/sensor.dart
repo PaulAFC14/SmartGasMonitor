@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert' show json;
 
+import 'package:sgm/src/%20models/api/api.dart';
+
 class Sensor {
   //Campos
   late int id;
@@ -58,7 +60,7 @@ class Sensor {
           'Bearer 3|LyVKhbTIW1qFOpTsm5zpb8b6T8yRSA9Iaga2FBAT06cf923b'
     };
     var request = http.Request(
-        'GET', Uri.parse('http://127.0.0.1:8000/api/sensors/by-user/1'));
+        'GET', Uri.parse('${Api().getHost()}/api/sensors/by-user/1'));
 
     request.headers.addAll(headers);
 
@@ -95,7 +97,7 @@ class Sensor {
           'Bearer 3|LyVKhbTIW1qFOpTsm5zpb8b6T8yRSA9Iaga2FBAT06cf923b'
     };
     var request =
-        http.Request('GET', Uri.parse('http://127.0.0.1:8000/api/sensors/1'));
+        http.Request('GET', Uri.parse('${Api().getHost()}/api/sensors/1'));
 
     request.headers.addAll(headers);
 

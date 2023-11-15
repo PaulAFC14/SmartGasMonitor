@@ -115,24 +115,18 @@ class _SensorsListViewState extends State<SensorsListView> {
                     color: Theme.of(context).hintColor,
                   ),
                 ),
-                GestureDetector(
-                  onTap: () {
+                IconButton(
+                  onPressed: () {
                     setState(() {
                       data = Sensor().getAll();
                     });
                   },
-                  child: Container(
-                    width: 7 * vw,
-                    height: 7 * vr,
-                    child: Center(
-                      child: Icon(
-                        Icons.refresh_rounded,
-                        size: 7 * vw,
-                        color: Theme.of(context).disabledColor,
-                      ),
-                    ),
+                  icon: Icon(
+                    Icons.refresh_rounded,
+                    size: 7 * vw,
+                    color: Theme.of(context).disabledColor,
                   ),
-                )
+                ),
               ],
             ),
             SizedBox(height: 2.5 * vw),

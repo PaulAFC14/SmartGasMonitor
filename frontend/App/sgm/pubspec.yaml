@@ -40,6 +40,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^1.1.0
   intl: ^0.18.1
+  carousel_slider: ^4.2.1
+  card_swiper: ^3.0.1
+  flutter_phone_direct_caller: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -80,6 +83,16 @@ flutter:
     - assets/img/actuador-gris.png
     - assets/img/actuador-verde.png
     - assets/img/temp.png
+    - assets/img/info/1.png
+    - assets/img/info/2.png
+    - assets/img/info/3.png
+    - assets/img/info/4.png
+    - assets/img/info/5.png
+    - assets/img/info/6.png
+    - assets/img/info/7.png
+    - assets/img/info/8.png
+    - assets/img/info/8.png
+    - assets/img/info/9.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

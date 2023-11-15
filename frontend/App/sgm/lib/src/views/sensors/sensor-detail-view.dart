@@ -3,6 +3,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:sgm/src/%20models/sensor/sensor.dart';
 import 'package:sgm/src/responsive/responsive-method.dart';
 import 'package:sgm/src/routes/routes.dart';
@@ -140,7 +141,7 @@ class _SensorDetailViewState extends State<SensorDetailView> {
                 ),
                 SizedBox(height: 1 * vw),
                 Text(
-                  'Última lectura: ${sensor.getUpdatedAt()}',
+                  'Última lectura: ${sensor.updated_at}',
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     fontSize: 4 * vw,
@@ -288,34 +289,11 @@ class _SensorDetailViewState extends State<SensorDetailView> {
                 (sensor.getGas < 61)
                     ? Container()
                     : GestureDetector(
-                        onTap: () => Routes(context),
-                        child: Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5 * vw),
-                          height: 15 * vr,
-                          decoration: BoxDecoration(
-                              color: Theme.of(context).canvasColor,
-                              borderRadius: BorderRadius.circular(15 * vr),
-                              border: Border.all(
-                                color: Theme.of(context).secondaryHeaderColor,
-                                width: 1 * vw,
-                              )),
-                          child: Center(
-                            child: Text(
-                              '¿Cómo actuar?',
-                              style: TextStyle(
-                                fontSize: 4 * vw,
-                                fontWeight: FontWeight.w700,
-                                color: Theme.of(context).secondaryHeaderColor,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                SizedBox(height: 5 * vr),
-                (sensor.getGas < 61)
-                    ? Container()
-                    : GestureDetector(
-                        onTap: () => Routes(context),
+                        onTap: () async {
+                          const number = '911'; //set the number here
+
+                          await FlutterPhoneDirectCaller.callNumber(number);
+                        },
                         child: Container(
                           margin: EdgeInsets.symmetric(horizontal: 5 * vw),
                           height: 15 * vr,
